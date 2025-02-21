@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Dear Adarsh!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-top: 50px;
+            animation: slideInFromTop 1.5s ease-out;
+        }
+
+        /* Animation for h1 */
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #ff7e5f;
+            animation: slideInFromBottom 1.5s ease-out;
+        }
+
+        /* Animation for h2 */
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .photo-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .photo-container img {
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            align-items: center;
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .message-box {
+            margin-top: 40px;
+            font-size: 1.5em;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .shyari-box {
+            margin-top: 30px;
+            font-size: 1.6em;
+            color: red;
+            font-style: italic;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        .flower {
+            position: fixed;
+            top: -10px;
+            font-size: 20px;
+            color: pink;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        .footer p {
+            color: #fff;
+        }
+
+        .flirty-line {
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Animation for flirty line (bouncing effect) */
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Valentine's Day, Dear Adarsh!</h1>
+    <h2>Here's a little surprise just for you...</h2>
+
+    <!-- Image Gallery Section -->
+    <div class="photo-container">
+        <img src="C:\Users\nikit\Desktop\flower.jpg" alt="Your Photo 1">
+
+    </div>
+
+    <!-- Message Box Section -->
+    <div class="message-box">
+        <p>Even though we're miles apart, I carry you in my heart each and every day. You’re my heartbeat from afar, and
+            my favorite person in the world. ❤️</p>
+    </div>
+
+    <!-- Shayari Section: Space for your Shayari -->
+    <div class="shyari-box">
+        <p> "गर सजदों में मांगा है तुझे,,तो क्यों न तेरा इंतेज़ार करूं,
+            तेरी बातों में इनकार है,
+            तेरी आंखों पर क्यों न ऐतबार करूं,
+            तू मेरा नहीं तो न सही,
+            आखिर क्यों न मैं तुझे प्यार करूं"</p>
+        <div class="shyari-box"> "Hrr kitaab ke piche kuch na kuch khaas likha h <br> ki hrr kitaad ke piche kuch na
+            kuch
+            khaas likha h|| <br> kuch iss trah maine tere mere ishq ka ithaas likha h| or tu chahe jha bhi hre apni
+            diary
+            mai to maine tujhe pane pass likha h"
+        </div>
+    </div>
+    <!-- YouTube Song Button -->
+    <button class="song-button" onclick="playSong()">Our favorite Song ❤️</button>
+    <!-- Flirty Message Section -->
+    <div class="flirty-line">
+        <p>"If loving you is a crime, I’m ready to be the most wanted!"</p>
+    </div>
+    <script>
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            flower.innerHTML = '🌸';
+            flower.style.left = `${Math.random() * 100}vw`;
+            flower.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            document.body.appendChild(flower);
+            setTimeout(() => flower.remove(), 5000);
+        }
+        setInterval(createFlower, 200);
+
+        function playSong() {
+            window.open("https://www.youtube.com/watch?v=Xd29mNwjUQQ", "_blank");
+        }
+    </script>
+
+    <div class="footer">
+        <p>Love, Nikita </p>
+    </div>
+
+</body>
+
+</html>
